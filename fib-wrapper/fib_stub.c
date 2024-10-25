@@ -6,5 +6,6 @@
 
 CAMLprim value caml_fib(value n) {
   CAMLparam1(n);
-  CAMLreturn(fib(Int_val(n)));
+  uint32_t val = fib(Int_val(n));
+  CAMLreturn(Val_int(val));
 }
